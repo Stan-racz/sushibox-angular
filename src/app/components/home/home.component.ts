@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Boxe } from '../../classe/boxe'
+import boxes from 'src/assets/boxes/boxes.json'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,93 +14,94 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.plateaux = boxes;
 
 
-    this.plateaux = [{
+//   this.plateaux = [{
 
-      "id": 1,
+//     "id": 1,
 
-      "nom": "Tasty Blend",
+//     "nom": "Tasty Blend",
 
-      "pieces": 12,
+//     "pieces": 12,
 
-      "composition": [
+//     "composition": [
 
-        { "nom": "California Saumon Avocat", "quantite": 3 },
+//       { "nom": "California Saumon Avocat", "quantite": 3 },
 
-        { "nom": "Sushi Saumon", "quantite": 3 },
+//       { "nom": "Sushi Saumon", "quantite": 3 },
 
-        { "nom": "Spring Avocat Cheese", "quantite": 3 },
+//       { "nom": "Spring Avocat Cheese", "quantite": 3 },
 
-        { "nom": "California pacific", "quantite": 3 },
+//       { "nom": "California pacific", "quantite": 3 },
 
-        { "nom": "Edamame/Salade de chou", "quantite": 1 }
+//       { "nom": "Edamame/Salade de chou", "quantite": 1 }
 
-      ],
+//     ],
 
-      "saveurs": ["saumon", "avocat", "cheese"],
+//     "saveurs": ["saumon", "avocat", "cheese"],
 
-      "prix": 12.50,
+//     "prix": 12.50,
 
-      "image": "tasty-blend"
+//     "image": "tasty-blend"
 
-    },
+//   },
 
-    {
+//   {
 
-      "id": 2,
+//     "id": 2,
 
-      "nom": "Amateur Mix",
+//     "nom": "Amateur Mix",
 
-      "pieces": 18,
+//     "pieces": 18,
 
-      "composition": [
+//     "composition": [
 
-        { "nom": "Maki Salmon Roll", "quantite": 3 },
+//       { "nom": "Maki Salmon Roll", "quantite": 3 },
 
-        { "nom": "Spring Saumon Avocat", "quantite": 3 },
+//       { "nom": "Spring Saumon Avocat", "quantite": 3 },
 
-        { "nom": "Maki Cheese Avocat", "quantite": 6 },
+//       { "nom": "Maki Cheese Avocat", "quantite": 6 },
 
-        { "nom": "California Saumon Avocat", "quantite": 3 },
+//       { "nom": "California Saumon Avocat", "quantite": 3 },
 
-        { "nom": "Edamame/Salade de chou", "quantite": 1 }
+//       { "nom": "Edamame/Salade de chou", "quantite": 1 }
 
-      ],
+//     ],
 
-      "saveurs": ["coriandre", "saumon", "avocat", "cheese"],
+//     "saveurs": ["coriandre", "saumon", "avocat", "cheese"],
 
-      "prix": 15.90,
+//     "prix": 15.90,
 
-      "image": "amateur-mix"
+//     "image": "amateur-mix"
 
-    },
+//   },
 
-    {
+//   {
 
-      "id": 3,
+//     "id": 3,
 
-      "nom": "Saumon Original",
+//     "nom": "Saumon Original",
 
-      "pieces": 11,
+//     "pieces": 11,
 
-      "composition": [
+//     "composition": [
 
-        { "nom": "California Saumon Avocat", "quantite": 6 },
+//       { "nom": "California Saumon Avocat", "quantite": 6 },
 
-        { "nom": "Sushi Saumon", "quantite": 5 },
+//       { "nom": "Sushi Saumon", "quantite": 5 },
 
-        { "nom": "Edamame/Salade de chou", "quantite": 1 }
+//       { "nom": "Edamame/Salade de chou", "quantite": 1 }
 
-      ],
+//     ],
 
-      "saveurs": ["saumon", "avocat"],
+//     "saveurs": ["saumon", "avocat"],
 
-      "prix": 12.50,
+//     "prix": 12.50,
 
-      "image": "salmon-original"
+//     "image": "salmon-original"
 
-    }];
+//   }];
 
   }
 }
