@@ -9,8 +9,27 @@
             <div fxFlex.gt-xs="30%" *ngFor="let item of plateaux; let index = index">
                 <hr />
                 <div class="has-text-centered">{{item.nom}}</div>
-                <img [src]="'assets/images/'+item.image+'.webp'" /><br />
+                <img [src]="'assets/images/'+item.image+'.webp'"  (click)="toggleModal(item)"/><br />
             </div>
         </div>
     </div>
 </section>
+
+<div class="modal" [ngClass]="{ 'is-active' : isModalActive }">
+    <div class="modal-background" (click)="onClose()"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title"> {{this.boxe.nom}}</p>
+            <button class="delete" aria-label="close" (click)="onClose()"></button>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... --> 
+            
+           Composition : 
+           
+        </section>
+        <footer class="modal-card-foot">
+            Prix : {{boxe.prix}} € pour {{boxe.pieces}} pièces
+        </footer>
+    </div>
+</div>
