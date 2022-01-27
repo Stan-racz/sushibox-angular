@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+}
+
+.container img{
+    margin-left: 2em;
+}
+.modal{
+    background-color: #000;
+}
+
+.modal-card{
+    width: 50%;
+}
+
+.modal section{
+    display: flex;
+}
+
+.modal .saveurs{
+    margin-left: 5em;
+}
+
+.modal img{
+    width: 50%;
+    height: auto;
+}
+
+.prix::after{
+    background-color: #e09f9c;
+    display: block;
+    content: '';
+    width: 6em;
+    height: 2px;
+    margin: 0.7em 0 1em 0;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}

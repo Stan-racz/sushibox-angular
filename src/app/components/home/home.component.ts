@@ -20,8 +20,6 @@ export class HomeComponent implements OnInit {
   }
 
   toggleModal(boxes: Boxe) {
-    console.log(boxes['id']);
-    console.log(this.plateaux[boxes['id']!-1]);
     this.isModalActive = !this.isModalActive;
     this.boxe = this.plateaux[boxes['id']!-1];
   }

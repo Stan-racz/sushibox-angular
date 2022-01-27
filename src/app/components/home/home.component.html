@@ -1,15 +1,15 @@
-<section class="section">
-
+  <section class="section">
     <div class="container">
-        <div fxFlex.gt-xs="30%">
             <h1 class="title is-3">Liste des Plateaux</h1>
-        </div>
 
         <div fxLayout="row wrap">
             <div fxFlex.gt-xs="30%" *ngFor="let item of plateaux; let index = index">
                 <hr />
                 <div class="has-text-centered">{{item.nom}}</div>
-                <img [src]="'assets/images/'+item.image+'.webp'"  (click)="toggleModal(item)"/><br />
+                <img [src]="'assets/images/'+item.image+'.webp'"  (click)="toggleModal(item)"/>
+                <div class="has-text-centered prix">{{item.prix}} € | {{item.pieces}} pièces</div>
+        
+                <div class="has-text-centered">Ici la notation</div>
             </div>
         </div>
     </div>
@@ -23,10 +23,22 @@
             <button class="delete" aria-label="close" (click)="onClose()"></button>
         </header>
         <section class="modal-card-body">
-            <!-- Content ... --> 
-            
-           Composition : 
-           
+                <img [src]="'assets/images/'+boxe.image+'.webp'" /><br />
+                <div class="composition">
+                        <p> <b>COMPOSITION : </b></p>
+                
+                        <ul>
+                            <li *ngFor="let composition of boxe.composition; let index = index">
+                                {{composition.quantite}} {{composition.nom}}
+                            </li>
+                        </ul>
+                </div> 
+                <div class="saveurs">
+                    <p><b>SAVEURS :</b> </p>
+                    <div *ngFor="let saveur of boxe.saveurs; let index = index">
+                        {{saveur}}
+                    </div>
+                </div>
         </section>
         <footer class="modal-card-foot">
             Prix : {{boxe.prix}} € pour {{boxe.pieces}} pièces
