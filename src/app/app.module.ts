@@ -4,13 +4,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ModalComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
