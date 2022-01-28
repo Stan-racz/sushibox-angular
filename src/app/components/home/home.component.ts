@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
     this.rating = 0;
     this.form = this.fb.group({
       rating: ['', Validators.required],
-    })
+    });
+    console.log("ici");
   }
 
   ngOnInit(): void {
@@ -47,7 +48,9 @@ export class HomeComponent implements OnInit {
   onClose(idBoxe: number) {
     this.isModalActive = !this.isModalActive;
     console.log(this.form.value.rating);
-    this.notation(idBoxe);
+    if (this.form.value.rating != null) {
+      this.notation(idBoxe);
+    }
     this.form.reset();
   }
 
