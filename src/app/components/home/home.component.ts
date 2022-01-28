@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit {
     this.form = this.fb.group({
       rating: ['', Validators.required],
     });
-    console.log("ici");
   }
 
   ngOnInit(): void {
