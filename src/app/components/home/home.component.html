@@ -1,47 +1,59 @@
-  <section class="section">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="section">
     <div class="container">
-            <h1 class="title is-3">Liste des Plateaux</h1>
+        <h1 class="title is-3">Liste des Plateaux</h1>
 
         <div fxLayout="row wrap">
             <div fxFlex.gt-xs="30%" *ngFor="let item of plateaux; let index = index">
                 <hr />
                 <div class="has-text-centered">{{item.nom}}</div>
-                <img [src]="'assets/images/'+item.image+'.webp'"  (click)="toggleModal(item)"/>
+                <img [src]="'assets/images/'+item.image+'.webp'" (click)="toggleModal(item)" />
                 <div class="has-text-centered prix">{{item.prix}} € | {{item.pieces}} pièces</div>
-        
-                <div class="has-text-centered">Ici la notation</div>
+
+                <div class="has-text-centered">{{notesG[item.id!-1]}}/5
+                    <fa-icon [icon]="faStar"></fa-icon>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <div class="modal" [ngClass]="{ 'is-active' : isModalActive }">
-    <div class="modal-background" (click)="onClose()"></div>
+    <div class="modal-background" (click)="onClose(this.boxe.id)"></div>
     <div class="modal-card">
         <header class="modal-card-head">
             <p class="modal-card-title"> {{this.boxe.nom}}</p>
-            <button class="delete" aria-label="close" (click)="onClose()"></button>
+            <button class="delete" aria-label="close" (click)="onClose(this.boxe.id)"></button>
         </header>
         <section class="modal-card-body">
-                <img [src]="'assets/images/'+boxe.image+'.webp'" /><br />
-                <div class="composition">
-                        <p> <b>COMPOSITION : </b></p>
-                
-                        <ul>
-                            <li *ngFor="let composition of boxe.composition; let index = index">
-                                {{composition.quantite}} {{composition.nom}}
-                            </li>
-                        </ul>
-                </div> 
-                <div class="saveurs">
-                    <p><b>SAVEURS :</b> </p>
-                    <div *ngFor="let saveur of boxe.saveurs; let index = index">
-                        {{saveur}}
-                    </div>
+            <img [src]="'assets/images/'+boxe.image+'.webp'" /><br />
+            <div class="composition">
+                <p> <b>COMPOSITION : </b></p>
+
+                <ul>
+                    <li *ngFor="let composition of boxe.composition; let index = index">
+                        {{composition.quantite}} {{composition.nom}}
+                    </li>
+                </ul>
+            </div>
+            <div class="saveurs">
+                <p><b>SAVEURS :</b> </p>
+                <div *ngFor="let saveur of boxe.saveurs; let index = index">
+                    {{saveur}}
                 </div>
+            </div>
         </section>
-        <footer class="modal-card-foot">
-            Prix : {{boxe.prix}} € pour {{boxe.pieces}} pièces
+        <footer class="modal-card-foot footer">
+            <div class="prix"> Prix : {{boxe.prix}} € pour {{boxe.pieces}} pièces</div>
+            <div class="form">
+                <form [formGroup]="form">
+                    Note: {{form.value.rating}}
+                    <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+
+                </form>
+            </div>
+
         </footer>
     </div>
 </div>
