@@ -11,5 +11,5 @@ export interface Boxe {
     saveurs?: string[],
     prix?: number,
     image?: string,
-    noteG?: number
+    notes?: number[]
 }

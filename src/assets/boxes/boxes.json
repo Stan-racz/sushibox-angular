@@ -12,7 +12,9 @@
         "saveurs": ["saumon", "avocat", "cheese"],
         "prix": 12.50,
         "image": "tasty-blend",
-        "noteG": 8
+        "notes": [
+            4
+        ]
     },
     {
         "id": 2,
@@ -28,7 +30,9 @@
         "saveurs": ["coriandre", "saumon", "avocat", "cheese"],
         "prix": 15.90,
         "image": "amateur-mix",
-        "noteG": 9
+        "notes": [
+            4
+        ]
     },
     {
         "id": 3,
@@ -42,7 +46,9 @@
         "saveurs": ["saumon", "avocat"],
         "prix": 12.50,
         "image": "salmon-original",
-        "noteG": 9
+        "notes": [
+            5
+        ]
     },
     {
         "id": 4,
@@ -57,7 +63,9 @@
         "saveurs": ["coriandre", "saumon", "avocat"],
         "prix": 15.90,
         "image": "salmon-lovers",
-        "noteG": 8
+        "notes": [
+            4.5
+        ]
     },
     {
         "id": 5,
@@ -70,7 +78,9 @@
         "saveurs": ["saumon"],
         "prix": 15.90,
         "image": "salmon-classic",
-        "noteG": 6
+        "notes": [
+            3.5
+        ]
     },
     {
         "id": 6,
@@ -86,7 +96,9 @@
         "saveurs": ["saumon", "thon", "avocat"],
         "prix": 15.90,
         "image": "master-mix",
-        "noteG": 7.5
+        "notes": [
+            4
+        ]
     },
     {
         "id": 7,
@@ -101,7 +113,9 @@
         "saveurs": ["saumon", "thon", "avocat", "cheese"],
         "prix": 15.90,
         "image": "sunrise",
-        "noteG": 6.5
+        "notes": [
+            4
+        ]
     },
     {
         "id": 8,
@@ -117,7 +131,9 @@
         "saveurs": ["saumon", "viande", "avocat", "cheese"],
         "prix": 15.90,
         "image": "sando-box-chicken-katsu",
-        "noteG": 9.5
+        "notes": [
+            4.5
+        ]
     },
     {
         "id": 9,
@@ -132,7 +148,9 @@
         "saveurs": ["saumon", "thon", "avocat"],
         "prix": 15.90,
         "image": "sando-box-salmon-aburi",
-        "noteG": 4
+        "notes": [
+            4
+        ]
     },
     {
         "id": 10,
@@ -148,7 +166,9 @@
         "saveurs": ["coriandre", "saumon", "avocat", "cheese"],
         "prix": 19.90,
         "image": "super-salmon",
-        "noteG": 5
+        "notes": [
+            5
+        ]
     },
     {
         "id": 11,
@@ -164,7 +184,9 @@
         "saveurs": ["spicy", "saumon", "thon", "crevette", "viande", "avocat"],
         "prix": 19.90,
         "image": "california-dream",
-        "noteG": 10
+        "notes": [
+            5
+        ]
     },
     {
         "id": 12,
@@ -181,7 +203,9 @@
         "saveurs": ["coriande", "spicy", "saumon", "viande", "avocat", "seriole lalandi"],
         "prix": 24.50,
         "image": "gourmet-mix",
-        "noteG": 8.5
+        "notes": [
+            4.5
+        ]
     },
     {
         "id": 13,
@@ -198,6 +222,8 @@
         "saveurs": ["spicy", "saumon", "thon", "avocat", "cheese"],
         "prix": 24.50,
         "image": "fresh-mix",
-        "noteG": 5.5
+        "notes": [
+            2.5
+        ]
     }
 ]
